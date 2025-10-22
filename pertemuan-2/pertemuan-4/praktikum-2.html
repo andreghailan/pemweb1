@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;  
+        }
+        /*.container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+            gap: 20px;
+        }*/
+        .container {
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+            transition: transform 0.2s ease-in-out;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+        }
+
+        .box:hover {
+            transform: scale(1.03);
+        }
+
+        .merah {
+            background-color: rgb(216, 56, 56);
+        }
+        .hijau{
+            background-color: rgb(73, 189, 73);
+        }
+        .biru {
+            background-color: rgb(104, 221, 223);
+        }
+    </style>
+</head>
+<body>
+    <h2>Div Container</h2>
+    <div class="container">
+        <div class="box merah">
+            <h3>Judul Bagian 1</h3>
+            <p> Konten Pertama dengan latar merah</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box hijau">
+            <h3>Judul Bagian 2</h3>
+            <p> Konten Pertama dengan latar hijau</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box biru">
+            <h3>Judul Bagian 3</h3>
+            <p> Konten Pertama dengan latar biru</p>
+        </div>
+    </div>
+</body>
+</html>
