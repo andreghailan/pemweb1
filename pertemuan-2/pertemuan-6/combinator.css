@@ -1,0 +1,26 @@
+div p {
+color: blue;
+}
+div > p {
+font-weight: bold;
+}
+div + p {
+color: red;
+}
+div ~ p {
+text-decoration: underline;
+}
+
+a:link { color: blue; }
+a:visited { color: purple; }
+a:hover { color: red; }
+a:active { color: green; }
+
+p::first-line {
+font-weight: bold;
+color: orange;
+}
+
+p::first-letter {
+font-size: 2em;
+}

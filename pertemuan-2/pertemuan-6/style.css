@@ -1,0 +1,36 @@
+/* Jenis Selector */
+* {
+margin: 0;
+padding: 0;
+}
+
+/* untuk semua heading */
+h2, h3, h4 {
+color: darkgreen;
+}
+
+/* untuk semua element yang ada di dalam body */
+body {
+background-color: #f0f0f0;
+font-family: Arial, sans-serif;
+}
+
+/* hanya untuk h1 */
+h1 {
+color: blue;
+text-align: center;
+}
+
+/* hanya untuk paragraph */
+p {
+color: #333;
+line-height: 1.5;
+}
+
+#highlight {
+background-color: yellow;
+}
+.italic {
+font-style: italic;
+}
+
