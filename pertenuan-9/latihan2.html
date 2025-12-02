@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  function ubahTeks() {
+    document.getElementById("judul").innerText = "Teks sudah berubah oleh JavaScript!";
+  }
+  function gantiWarna() {
+    document.getElementById("judul").style.color = "blue";
+  }
+  function balikin() {
+    document.getElementById("judul").innerText = "Ini Judul Awal";
+  }
+  console.log("Halo, ini dari console log!");
+</script>
+
+<h2 id="judul">Ini Judul Awal</h2>
+<button onclick="ubahTeks()">Ubah Judul</button>
+<button onclick="gantiWarna()">Ubah warnanya</button>
+<button onclick="balikin()">Kembali ke awal</button>
+
+
+
+</body>
+</html>
