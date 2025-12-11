@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Interaktif</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <p><b>Pertanyaan</b></p>
+        <ol>
+            <li>Siapakah Nama yang membuat program ini?</li>
+            <li>Angkatan berapa kah aku?</li>
+            <li>Apa mata kuliah kesukaan aku?</li>
+            <li>Siapa nama dosen mata kuliah Pemograman Web</li>
+            <li>Apa Kepanjangan HTML?</li>
+        </ol>
+
+        <div class="jawaban" style="display: none;">
+            <p><b>Jawaban</b></p>
+                <ol>
+                    <li>Andre Ghailan Pratama</li>
+                    <li>Angkatan 2025</li>
+                    <li>Pemograman web 1</li>
+                    <li>Bapak Edo</li>
+                    <li>Hyper Text Markup Language</li>
+            </ol>
+
+        </div>
+
+    <button id="tombol1">Show Jawaban!</button>
+    <button id="tombol2">Hide Jawban</button>
+     
+    <script>
+    $(document).ready(function(){
+        $("#tombol2").click(function(){
+        $("div").hide();
+    });
+
+    $("#tombol1").click(function(){
+      $("div").show();
+    });
+
+    $("li").hover(
+      function(){ $(this).css("color","blue"); },
+      function(){ $(this).css("color","black"); }
+    );
+  });
+</script>
+
+</body>
+</html>

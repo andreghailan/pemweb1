@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Chaining jQuery</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <p id="text">Nama Aku Andre Ghailan</p>
+    <button id="run">Jalankan</button>
+
+<script>
+$(function(){
+  $("#run").click(function(){
+    $("#text")
+      .css("color","blue")
+      .slideUp(3000, function() {  
+        $(this).slideDown(3000, function() {  
+          setTimeout(function() {  
+            $("#text").fadeOut(2000, function() {  
+              $(this).fadeIn(2000);     
+            });
+          }, 3000);
+  });
+});
+  });w
+});
+</script>
+</body>
+</html>

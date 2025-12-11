@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Fade</title>
+
+    <style>
+        body {
+            position:relative;
+            width: 400px;
+            height: 250px;
+        }
+        .slider {
+            position: relative;
+            width: 300px;
+            height: 250px;
+        }
+        .slider img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: none;
+        }
+        .slider img.active {
+            display: block;
+        }
+
+        button{
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider">
+        <img src="gambar/download.jpeg" class="slide active">
+        <img src="gambar/wallhaven-d69eom.jpg" class="slide">
+        <img src="gambar/wallhaven-mldm71.jpg" class="slide">
+    </div>
+
+    <button id="prev">Prev</button>
+    <button id="next">Next</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            let index = 0;
+            let slides = $(".slide");
+            slides.hide().eq(index).show();
+
+            function showSlide(newIndex) {
+                slides.eq(index).fadeOut(400);
+                slides.eq(newIndex).fadeIn(400);
+                index = newIndex;
+            }
+
+            $("#next").click(function () {
+                let newIndex = (index + 1) % slides.length;
+                showSlide(newIndex);
+            });
+
+            $("#prev").click(function () {
+                let newIndex = (index - 1 + slides.length) % slides.length;
+                showSlide(newIndex);
+            });
+        });
+    </script>
+
+</body>
+</html>

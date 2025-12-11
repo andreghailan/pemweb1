@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            border: solid;
+            border-radius: 10px;
+            width: 280px;
+
+        }
+
+        body {
+            font-family:'Times New Roman', Times, serif;
+            padding: 20px;
+            background-color: #38ea88;
+        }
+
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+                background-color: #ff9b28;
+            }
+    </style>
+</head>
+<body>  
+    <table>
+        <div id="bio">
+            <img id="foto" src="gambar/download.jpeg" alt="Foto Profil">
+            <p><b>Nama:</b> <span id="nama">Andre Ghailan Pratama</span></p>
+            <p><b>Program Studi:</b> <span id="umur">Sistem Informasi</span></p>
+        </div>
+
+        <span>
+            <button onclick="(UbahNama())">Ubah Nama</button>
+            <button onclick="(UbahProdi())">Ubah Program Studi</button>
+            <button onclick="(UbahGambar())">Ganti Foto</button>
+            <button onclick="(HideBio())">Sembunyikan Biodata</button>
+            <button onclick="(ShowBio())">Tampilkan Biodata</button>
+        </span>
+    </table>
+
+
+    <script>
+        function UbahNama() {
+        document.getElementById("nama").innerHTML = "Akbar Nur Habibi";
+    }
+
+    function UbahProdi() {
+        document.getElementById("umur").innerHTML = "Teknik Informatika";
+    }
+
+    function UbahGambar() {
+        document.getElementById("foto").setAttribute("src","gambar/wallhaven-d69eom.jpg");
+    }
+
+    function HideBio() {
+        document.getElementById("bio").style.display = "none";
+    }
+
+    function ShowBio() {
+        document.getElementById("bio").style.display = "block";
+    }
+    </script>
+</body>
+</html>
