@@ -3,19 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warna berdasarkan ukuran layar</title>
+    <title>Orientation Query</title>
     <style>
         body {
-            background: lightblue;
+            text-align: center;
         }
-        @media (min-width: 600px) {
+        @media (orientation: landscape) {
             body {
-                background: lightgreen;
-            }
-        }
-        @media (min-width: 900px) {
-            body {
-                background:  lightyellow;
+                text-align: left;
             }
         }
     </style>
